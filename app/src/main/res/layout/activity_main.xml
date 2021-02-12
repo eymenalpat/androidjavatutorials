@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="245dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Sayı Giriniz"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="245dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="73dp"
+        android:ems="10"
+        android:hint="Sayı Giriniz"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="430dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sonuctext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:onClick="topla"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:onClick="carp"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:onClick="cikar"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="98dp"
+            android:layout_height="46dp"
+            android:onClick="bol"
+            android:text="/" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sonuctext"
+        android:layout_width="287dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="60dp"
+        android:hint="Sonuç"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
